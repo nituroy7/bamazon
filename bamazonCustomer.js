@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-// var products = require("products");
+
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "success123",
+    password: "",
     database: "bamazon"
 });
 
@@ -96,7 +96,6 @@ function updateProduct(stock, id) {
             }
         ],
         function(err, res) {
-            // console.log("\n " + res.affectedRows + " products added to the Cart!");
             console.log('\n Remaining quantity: ' + stock);
         }
     );
